@@ -1,22 +1,40 @@
-import {useState} from "react";
-
+import { useState } from "react";
 
 function Example() {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [A, setA] = useState("");
+  const [B, setB] = useState("");
 
-  const onFirstNameChange = (event) => {
-    setFirstName(event.target.value);
-  }
-  const onLastNameChange = (event) => {
-    setLastName(event.target.value);
-  }
+  const onAChange = (event) => {
+    setA(event.target.value);
+  };
+  const onBChange = (event) => {
+    setB(event.target.value);
+  };
+  // const [firstName, setFirstName] = useState("");
+  // const [lastName, setLastName] = useState("");
 
+  // const onFirstNameChange = (event) => {
+  //   setFirstName(event.target.value);
+  // }
+  // const onLastNameChange = (event) => {
+  //   setLastName(event.target.value);
+  // }
 
-  
-  return ( 
+  return (
     <div className="Example">
-      {firstName} {lastName}<br/>
+      A + B = {A + B}
+      <br />
+      <label>
+        A:
+        <input type="text" onChange={onAChange} />
+      </label>
+       <br />
+      <label>
+        B:
+        <input type="text" onChange={onBChange} />
+      </label>
+
+      {/* {firstName} {lastName}<br/>
       <label>
         First name:
         <input type="text" onChange={onFirstNameChange}/>
@@ -24,11 +42,9 @@ function Example() {
       <label>
         Last name:
         <input type="text" onChange={onLastNameChange}/>
-      </label>
-    
-      
+      </label> */}
     </div>
-   );
+  );
 }
 
 export default Example;
