@@ -22,7 +22,7 @@ function Example() {
 
   return (
     <div className="Example">
-      A + B = {A + B}
+      A + B = {(+A) + (+B)}
       <br />
       <label>
         A:
